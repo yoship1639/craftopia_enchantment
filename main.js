@@ -32,6 +32,13 @@ $(function()
 			213: "水晶",
 			214: "角",
 			215: "コハク",
+			216: "ガラス",
+			217: "黒色火薬",
+			218: "貝",
+			219: "卵",
+			220: "きのこ",
+			221: "高級切り身",
+			222: "魚の切り身",
 		};
 
 	var itemList = [
@@ -98,11 +105,129 @@ $(function()
 			],
 		},
 		{
-			id: 102,
+			id: 200,
 			name: "【アクセサリー】ベル",
 			materials: [
 				{ id: 101, count: 8},
 				{ id: 102, count: 5},
+			],
+		},
+		{
+			id: 201,
+			name: "【アクセサリー】探知機",
+			materials: [
+				{ id: 201, count: 1},
+				{ id: 100, count: 1},
+			],
+		},
+		{
+			id: 202,
+			name: "【アクセサリー】鉄のリング",
+			materials: [
+				{ id: 101, count: 5},
+				{ id: 216, count: 3},
+			],
+		},
+		{
+			id: 203,
+			name: "【アクセサリー】鉄のアミュレット",
+			materials: [
+				{ id: 101, count: 5},
+				{ id: 216, count: 3},
+			],
+		},
+		{
+			id: 204,
+			name: "【アクセサリー】熱血のアミュレット",
+			materials: [
+				{ id: 217, count: 1},
+				{ id: 214, count: 1},
+				{ id: 208, count: 1},
+				{ id: 103, count: 2},
+			],
+		},
+		{
+			id: 205,
+			name: "【アクセサリー】免疫のアミュレット",
+			materials: [
+				{ id: 218, count: 3},
+				{ id: 219, count: 3},
+				{ id: 220, count: 3},
+				{ id: 103, count: 2},
+			],
+		},
+		{
+			id: 206,
+			name: "【アクセサリー】冷徹のアミュレット",
+			materials: [
+				{ id: 221, count: 1},
+				{ id: 222, count: 1},
+				{ id: 218, count: 1},
+				{ id: 103, count: 2},
+			],
+		},
+		{
+			id: 300,
+			name: "【グライダー】石のグライダー",
+			materials: [
+				{ id: 201, count: 6},
+				{ id: 200, count: 8},
+			],
+		},
+		{
+			id: 400,
+			name: "【盾】銅の盾",
+			materials: [
+				{ id: 100, count: 10},
+				{ id: 200, count: 10},
+			],
+		},
+		{
+			id: 401,
+			name: "【盾】鉄の盾",
+			materials: [
+				{ id: 101, count: 10},
+				{ id: 200, count: 10},
+			],
+		},
+		{
+			id: 402,
+			name: "【盾】銀の盾",
+			materials: [
+				{ id: 102, count: 10},
+				{ id: 200, count: 10},
+			],
+		},
+		{
+			id: 403,
+			name: "【盾】鋼鉄の盾",
+			materials: [
+				{ id: 103, count: 10},
+				{ id: 200, count: 10},
+			],
+		},
+		{
+			id: 404,
+			name: "【盾】チタンの盾",
+			materials: [
+				{ id: 104, count: 10},
+				{ id: 200, count: 10},
+			],
+		},
+		{
+			id: 405,
+			name: "【盾】金の盾",
+			materials: [
+				{ id: 105, count: 10},
+				{ id: 200, count: 10},
+			],
+		},
+		{
+			id: 406,
+			name: "【盾】プラチナの盾",
+			materials: [
+				{ id: 106, count: 10},
+				{ id: 200, count: 10},
 			],
 		},
 	];
@@ -167,7 +292,7 @@ $(function()
 
 			var matId = "mat_" + i;
 			$('#material_list').append($('<div>').attr("id", "mat_" + i).attr("class", "content"));
-			$('#' + matId).append($('<label>').attr("class", "label").text("素材" + (i+1) + ": " + materialList[mat.id] + " x" + mat.count));
+			$('#' + matId).append($('<label>').attr("class", "label").text(materialList[mat.id] + " x" + mat.count));
 			$('#' + matId).append($('<div>').attr("class", "columns is-mobile is-multiline is-centered"));
 			for (var j = 0; j < 4; j++)
 			{
