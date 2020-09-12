@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<title>クラフトピア　エンチャントジェネレータ</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+</head>
+
+<body>
+
+	<section class="hero is-dark">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">
+					Craftopia エンチャントジェネレータ
+				</h1>
+				<h2 class="subtitle is-6">
+					エンチャント付与の成功確率を計算して表示するエンチャントジェネレータです。
+				</h2>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<div class="field">
+				<label class="label">作りたいアイテム</label>
+				<div class="control">
+					<div class="select">
+						<select id="item_list"></select>
+					</div>
+				</div>
+			</div>
+			<div id="material_list"></div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="container">
+			<label class="label">付けたいエンチャント</label>
+			<div id="require_list"></div>
+			<label id="result" class="is-size-3"></label>
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="content has-text-centered">
+				<p>
+					2020 ©yoship1639
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
